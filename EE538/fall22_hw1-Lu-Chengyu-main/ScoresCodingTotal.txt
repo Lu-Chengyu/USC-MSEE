@@ -1,0 +1,9 @@
+Q1: 10 / 10 passed | score: 40
+Q2: 3 / 3 passed | score: 20
+Q3: 5 / 5 passed | score: 20
+Q4: 2 / 2 passed | score: 20
+Q5: 2 / 2 passed | score: 20
+-----------------------------------------
+Your total score of coding section: 120.0
+-----------------------------------------
+Tue Sep 20 11:38:45 PDT 2022
