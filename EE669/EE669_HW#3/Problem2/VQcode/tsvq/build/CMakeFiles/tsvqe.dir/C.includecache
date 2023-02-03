@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/luchengyu/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq/tsvq.h
+stdio.h
+-
+math.h
+-
+
+/home/luchengyu/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq/tsvqe.c
+tsvq.h
+/home/luchengyu/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq/tsvq.h
+

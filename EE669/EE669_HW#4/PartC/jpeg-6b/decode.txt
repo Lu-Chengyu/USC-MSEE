@@ -1,0 +1,128 @@
+./djpeg -grayscale -outfile ../man20/camera_man-2-3.raw ../man20/camera_man-2-3.jpg
+./djpeg -outfile ../pepper20/pepper01.raw ../pepper20/pepper01.jpg
+./djpeg -outfile ../pepper20/pepper2-3.raw ../pepper20/pepper2-3.jpg
+./djpeg -grayscale -outfile ../man20/camera_man00.raw ../man20/camera_man00.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-23.raw ../man20/camera_man-23.jpg
+./djpeg -outfile ../pepper20/pepper0-2.raw ../pepper20/pepper0-2.jpg
+./djpeg -outfile ../pepper20/pepper23.raw ../pepper20/pepper23.jpg
+./djpeg -grayscale -outfile ../man20/camera_man0-1.raw ../man20/camera_man0-1.jpg
+./djpeg -grayscale -outfile ../man20/camera_man2-3.raw ../man20/camera_man2-3.jpg
+./djpeg -outfile ../pepper20/pepper02.raw ../pepper20/pepper02.jpg
+./djpeg -outfile ../pepper20/pepper-24.raw ../pepper20/pepper-24.jpg
+./djpeg -grayscale -outfile ../man20/camera_man01.raw ../man20/camera_man01.jpg
+./djpeg -grayscale -outfile ../man20/camera_man23.raw ../man20/camera_man23.jpg
+./djpeg -outfile ../pepper20/pepper0-3.raw ../pepper20/pepper0-3.jpg
+./djpeg -outfile ../pepper20/pepper24.raw ../pepper20/pepper24.jpg
+./djpeg -grayscale -outfile ../man20/camera_man0-2.raw ../man20/camera_man0-2.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-24.raw ../man20/camera_man-24.jpg
+./djpeg -outfile ../pepper20/pepper03.raw ../pepper20/pepper03.jpg
+./djpeg -outfile ../pepper20/pepper-30.raw ../pepper20/pepper-30.jpg
+./djpeg -grayscale -outfile ../man20/camera_man02.raw ../man20/camera_man02.jpg
+./djpeg -grayscale -outfile ../man20/camera_man24.raw ../man20/camera_man24.jpg
+./djpeg -outfile ../pepper20/pepper04.raw ../pepper20/pepper04.jpg
+./djpeg -outfile ../pepper20/pepper30.raw ../pepper20/pepper30.jpg
+./djpeg -grayscale -outfile ../man20/camera_man0-3.raw ../man20/camera_man0-3.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-30.raw ../man20/camera_man-30.jpg
+./djpeg -outfile ../pepper20/pepper-10.raw ../pepper20/pepper-10.jpg
+./djpeg -outfile ../pepper20/pepper-3-1.raw ../pepper20/pepper-3-1.jpg
+./djpeg -grayscale -outfile ../man20/camera_man03.raw ../man20/camera_man03.jpg
+./djpeg -grayscale -outfile ../man20/camera_man30.raw ../man20/camera_man30.jpg
+./djpeg -outfile ../pepper20/pepper10.raw ../pepper20/pepper10.jpg
+./djpeg -outfile ../pepper20/pepper-31.raw ../pepper20/pepper-31.jpg
+./djpeg -grayscale -outfile ../man20/camera_man04.raw ../man20/camera_man04.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-3-1.raw ../man20/camera_man-3-1.jpg
+./djpeg -outfile ../pepper20/pepper-1-1.raw ../pepper20/pepper-1-1.jpg
+./djpeg -outfile ../pepper20/pepper3-1.raw ../pepper20/pepper3-1.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-10.raw ../man20/camera_man-10.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-31.raw ../man20/camera_man-31.jpg
+./djpeg -outfile ../pepper20/pepper-11.raw ../pepper20/pepper-11.jpg
+./djpeg -outfile ../pepper20/pepper31.raw ../pepper20/pepper31.jpg
+./djpeg -grayscale -outfile ../man20/camera_man10.raw ../man20/camera_man10.jpg
+./djpeg -grayscale -outfile ../man20/camera_man3-1.raw ../man20/camera_man3-1.jpg
+./djpeg -outfile ../pepper20/pepper1-1.raw ../pepper20/pepper1-1.jpg
+./djpeg -outfile ../pepper20/pepper-3-2.raw ../pepper20/pepper-3-2.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-1-1.raw ../man20/camera_man-1-1.jpg
+./djpeg -grayscale -outfile ../man20/camera_man31.raw ../man20/camera_man31.jpg
+./djpeg -outfile ../pepper20/pepper11.raw ../pepper20/pepper11.jpg
+./djpeg -outfile ../pepper20/pepper-32.raw ../pepper20/pepper-32.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-11.raw ../man20/camera_man-11.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-3-2.raw ../man20/camera_man-3-2.jpg
+./djpeg -outfile ../pepper20/pepper-1-2.raw ../pepper20/pepper-1-2.jpg
+./djpeg -outfile ../pepper20/pepper3-2.raw ../pepper20/pepper3-2.jpg
+./djpeg -grayscale -outfile ../man20/camera_man1-1.raw ../man20/camera_man1-1.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-32.raw ../man20/camera_man-32.jpg
+./djpeg -outfile ../pepper20/pepper-12.raw ../pepper20/pepper-12.jpg
+./djpeg -outfile ../pepper20/pepper32.raw ../pepper20/pepper32.jpg
+./djpeg -grayscale -outfile ../man20/camera_man11.raw ../man20/camera_man11.jpg
+./djpeg -grayscale -outfile ../man20/camera_man3-2.raw ../man20/camera_man3-2.jpg
+./djpeg -outfile ../pepper20/pepper1-2.raw ../pepper20/pepper1-2.jpg
+./djpeg -outfile ../pepper20/pepper-3-3.raw ../pepper20/pepper-3-3.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-1-2.raw ../man20/camera_man-1-2.jpg
+./djpeg -grayscale -outfile ../man20/camera_man32.raw ../man20/camera_man32.jpg
+./djpeg -outfile ../pepper20/pepper12.raw ../pepper20/pepper12.jpg
+./djpeg -outfile ../pepper20/pepper-33.raw ../pepper20/pepper-33.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-12.raw ../man20/camera_man-12.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-3-3.raw ../man20/camera_man-3-3.jpg
+./djpeg -outfile ../pepper20/pepper-1-3.raw ../pepper20/pepper-1-3.jpg
+./djpeg -outfile ../pepper20/pepper3-3.raw ../pepper20/pepper3-3.jpg
+./djpeg -grayscale -outfile ../man20/camera_man1-2.raw ../man20/camera_man1-2.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-33.raw ../man20/camera_man-33.jpg
+./djpeg -outfile ../pepper20/pepper-13.raw ../pepper20/pepper-13.jpg
+./djpeg -outfile ../pepper20/pepper33.raw ../pepper20/pepper33.jpg
+./djpeg -grayscale -outfile ../man20/camera_man12.raw ../man20/camera_man12.jpg
+./djpeg -grayscale -outfile ../man20/camera_man3-3.raw ../man20/camera_man3-3.jpg
+./djpeg -outfile ../pepper20/pepper1-3.raw ../pepper20/pepper1-3.jpg
+./djpeg -outfile ../pepper20/pepper-34.raw ../pepper20/pepper-34.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-1-3.raw ../man20/camera_man-1-3.jpg
+./djpeg -grayscale -outfile ../man20/camera_man33.raw ../man20/camera_man33.jpg
+./djpeg -outfile ../pepper20/pepper13.raw ../pepper20/pepper13.jpg
+./djpeg -outfile ../pepper20/pepper34.raw ../pepper20/pepper34.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-13.raw ../man20/camera_man-13.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-34.raw ../man20/camera_man-34.jpg
+./djpeg -outfile ../pepper20/pepper-14.raw ../pepper20/pepper-14.jpg
+./djpeg -outfile ../pepper20/pepper40.raw ../pepper20/pepper40.jpg
+./djpeg -grayscale -outfile ../man20/camera_man1-3.raw ../man20/camera_man1-3.jpg
+./djpeg -grayscale -outfile ../man20/camera_man34.raw ../man20/camera_man34.jpg
+./djpeg -outfile ../pepper20/pepper14.raw ../pepper20/pepper14.jpg
+./djpeg -outfile ../pepper20/pepper4-1.raw ../pepper20/pepper4-1.jpg
+./djpeg -grayscale -outfile ../man20/camera_man13.raw ../man20/camera_man13.jpg
+./djpeg -grayscale -outfile ../man20/camera_man40.raw ../man20/camera_man40.jpg
+./djpeg -outfile ../pepper20/pepper41.raw ../pepper20/pepper41.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-14.raw ../man20/camera_man-14.jpg
+./djpeg -grayscale -outfile ../man20/camera_man4-1.raw ../man20/camera_man4-1.jpg
+./djpeg -outfile ../pepper20/pepper-20.raw ../pepper20/pepper-20.jpg
+./djpeg -outfile ../pepper20/pepper4-2.raw ../pepper20/pepper4-2.jpg
+./djpeg -grayscale -outfile ../man20/camera_man14.raw ../man20/camera_man14.jpg
+./djpeg -grayscale -outfile ../man20/camera_man41.raw ../man20/camera_man41.jpg
+./djpeg -outfile ../pepper20/pepper20.raw ../pepper20/pepper20.jpg
+./djpeg -outfile ../pepper20/pepper42.raw ../pepper20/pepper42.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-20.raw ../man20/camera_man-20.jpg
+./djpeg -grayscale -outfile ../man20/camera_man4-2.raw ../man20/camera_man4-2.jpg
+./djpeg -outfile ../pepper20/pepper-2-1.raw ../pepper20/pepper-2-1.jpg
+./djpeg -outfile ../pepper20/pepper4-3.raw ../pepper20/pepper4-3.jpg
+./djpeg -grayscale -outfile ../man20/camera_man20.raw ../man20/camera_man20.jpg
+./djpeg -grayscale -outfile ../man20/camera_man42.raw ../man20/camera_man42.jpg
+./djpeg -outfile ../pepper20/pepper-21.raw ../pepper20/pepper-21.jpg
+./djpeg -outfile ../pepper20/pepper43.raw ../pepper20/pepper43.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-2-1.raw ../man20/camera_man-2-1.jpg
+./djpeg -grayscale -outfile ../man20/camera_man4-3.raw ../man20/camera_man4-3.jpg
+./djpeg -outfile ../pepper20/pepper2-1.raw ../pepper20/pepper2-1.jpg
+./djpeg -outfile ../pepper20/pepper44.raw ../pepper20/pepper44.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-21.raw ../man20/camera_man-21.jpg
+./djpeg -grayscale -outfile ../man20/camera_man43.raw ../man20/camera_man43.jpg
+./djpeg -outfile ../pepper20/pepper21.raw ../pepper20/pepper21.jpg
+./djpeg -grayscale -outfile ../man20/camera_man2-1.raw ../man20/camera_man2-1.jpg
+./djpeg -grayscale -outfile ../man20/camera_man44.raw ../man20/camera_man44.jpg
+./djpeg -outfile ../pepper20/pepper-2-2.raw ../pepper20/pepper-2-2.jpg
+./djpeg -grayscale -outfile ../man20/camera_man21.raw ../man20/camera_man21.jpg
+./djpeg -outfile ../pepper20/pepper-22.raw ../pepper20/pepper-22.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-2-2.raw ../man20/camera_man-2-2.jpg
+./djpeg -outfile ../pepper20/pepper2-2.raw ../pepper20/pepper2-2.jpg
+./djpeg -grayscale -outfile ../man20/camera_man-22.raw ../man20/camera_man-22.jpg
+./djpeg -outfile ../pepper20/pepper22.raw ../pepper20/pepper22.jpg
+./djpeg -grayscale -outfile ../man20/camera_man2-2.raw ../man20/camera_man2-2.jpg
+./djpeg -outfile ../pepper20/pepper00.raw ../pepper20/pepper00.jpg
+./djpeg -outfile ../pepper20/pepper-2-3.raw ../pepper20/pepper-2-3.jpg
+./djpeg -grayscale -outfile ../man20/camera_man22.raw ../man20/camera_man22.jpg
+./djpeg -outfile ../pepper20/pepper0-1.raw ../pepper20/pepper0-1.jpg
+./djpeg -outfile ../pepper20/pepper-23.raw ../pepper20/pepper-23.jpg

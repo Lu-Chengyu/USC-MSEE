@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wno-implicit-function-declaration  -O3 -DNDEBUG  -shared -Wl,-soname,libHW3.so -o ../lib/libHW3.so CMakeFiles/HW3.dir/lloyd0.c.o CMakeFiles/HW3.dir/lloyd1.c.o CMakeFiles/HW3.dir/lloyd2.c.o CMakeFiles/HW3.dir/stdvq_util.c.o 

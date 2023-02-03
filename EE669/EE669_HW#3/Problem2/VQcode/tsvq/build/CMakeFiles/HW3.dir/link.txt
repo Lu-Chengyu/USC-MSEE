@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wno-implicit-function-declaration  -O3 -DNDEBUG  -shared -Wl,-soname,libHW3.so -o ../lib/libHW3.so CMakeFiles/HW3.dir/node_util.c.o CMakeFiles/HW3.dir/prune_util.c.o CMakeFiles/HW3.dir/read_util.c.o CMakeFiles/HW3.dir/slope_util.c.o CMakeFiles/HW3.dir/tsvq_util.c.o CMakeFiles/HW3.dir/tsvqe_util.c.o CMakeFiles/HW3.dir/write_util.c.o 

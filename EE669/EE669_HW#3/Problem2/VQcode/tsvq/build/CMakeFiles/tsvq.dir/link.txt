@@ -1,0 +1,1 @@
+/usr/bin/cc -Wno-implicit-function-declaration  -O3 -DNDEBUG  -rdynamic CMakeFiles/tsvq.dir/tsvq.c.o  -o ../tsvq -Wl,-rpath,/home/luchengyu/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq/lib ../lib/libHW3.so -lm 

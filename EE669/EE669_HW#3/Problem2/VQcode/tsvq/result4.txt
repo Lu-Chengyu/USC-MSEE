@@ -1,0 +1,436 @@
+43
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvq -t TrainingSet/TrainingImage.raw -c codebook.dat -s statistics -d 4 -r 3  -B
+
+OPTIONS   DESCRIPTIONS                         SETTINGS
+-t        blocked training sequence            TrainingSet/TrainingImage.raw
+-c        codebook                             codebook.dat
+-s        codebook statistics                  statistics
+-d        vector dimension                     4
+-r        stopping rate (bits per vector)      3
+-m        multiplicative offset                0.01
+-h        convergence threshold                0
+-B        produce a balanced tree
+          number of training vectors           49152
+
+           RATE          DISTORTION
+       0.000000        14176.705998
+       1.000000         5502.187911
+       1.713867         3201.910605
+       2.000000         1768.150578
+       2.267232         1484.808079
+       2.713867         1174.728853
+       2.878825         1077.807737
+       3.000000          973.368566
+
+The number of nodes is 15
+The empirical entropy is 2.813224 bits per vector
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedbike.raw -o OutputImages/Outputbike43.raw -R -D
+./tsvqe: OutputImages/Outputbike43.raw: not found
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedbike.raw -o OutputImages/Outputbike43.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           15
+Image to encode:           images/blockedbike.raw
+Encoded file:              OutputImages/Outputbike43.raw
+Number of pixels encoded:  65536
+Average rate:              3.000000
+Empirical entropy:         2.521386
+Average distortion:        1707.026523
+Maximum codeword length:   3
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputbike43.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedboat.raw -o OutputImages/Outputboat43.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           15
+Image to encode:           images/blockedboat.raw
+Encoded file:              OutputImages/Outputboat43.raw
+Number of pixels encoded:  65536
+Average rate:              3.000000
+Empirical entropy:         2.121665
+Average distortion:        491.186970
+Maximum codeword length:   3
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputboat43.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedhat.raw -o OutputImages/Outputhat43.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           15
+Image to encode:           images/blockedhat.raw
+Encoded file:              OutputImages/Outputhat43.raw
+Number of pixels encoded:  65536
+Average rate:              3.000000
+Empirical entropy:         2.360956
+Average distortion:        481.752858
+Maximum codeword length:   3
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputhat43.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedhouse.raw -o OutputImages/Outputhouse43.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           15
+Image to encode:           images/blockedhouse.raw
+Encoded file:              OutputImages/Outputhouse43.raw
+Number of pixels encoded:  65536
+Average rate:              3.000000
+Empirical entropy:         2.538271
+Average distortion:        1084.766355
+Maximum codeword length:   3
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputhouse43.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedpeople.raw -o OutputImages/Outputpeople43.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           15
+Image to encode:           images/blockedpeople.raw
+Encoded file:              OutputImages/Outputpeople43.raw
+Number of pixels encoded:  65536
+Average rate:              3.000000
+Empirical entropy:         2.691982
+Average distortion:        721.892205
+Maximum codeword length:   3
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputpeople43.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedplane.raw -o OutputImages/Outputplane43.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           15
+Image to encode:           images/blockedplane.raw
+Encoded file:              OutputImages/Outputplane43.raw
+Number of pixels encoded:  65536
+Average rate:              3.000000
+Empirical entropy:         2.354588
+Average distortion:        1217.247046
+Maximum codeword length:   3
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputplane43.raw.stat
+
+
+45
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvq -t TrainingSet/TrainingImage.raw -c codebook.dat -s statistics -d 4 -r 5  -B
+
+OPTIONS   DESCRIPTIONS                         SETTINGS
+-t        blocked training sequence            TrainingSet/TrainingImage.raw
+-c        codebook                             codebook.dat
+-s        codebook statistics                  statistics
+-d        vector dimension                     4
+-r        stopping rate (bits per vector)      5
+-m        multiplicative offset                0.01
+-h        convergence threshold                0
+-B        produce a balanced tree
+          number of training vectors           49152
+
+           RATE          DISTORTION
+       0.000000        14176.705998
+       1.000000         5502.187911
+       1.713867         3201.910605
+       2.000000         1768.150578
+       2.267232         1484.808079
+       2.713867         1174.728853
+       2.878825         1077.807737
+       3.000000          973.368566
+       3.114237          915.112670
+       3.267232          872.870385
+       3.486613          826.179869
+       3.713867          783.282906
+       3.812663          769.145685
+       3.878825          750.955869
+       3.926717          739.013159
+       4.000000          727.579032
+       4.033915          722.834206
+       4.114237          714.471240
+       4.185730          705.379674
+       4.267232          691.253227
+       4.365682          675.819259
+       4.486613          657.016551
+       4.605855          644.322548
+       4.713867          635.332444
+       4.766337          622.625726
+       4.812663          610.539449
+       4.854492          600.681506
+       4.878825          586.970561
+       4.899984          584.303857
+       4.926717          582.144835
+       4.960409          580.394889
+       5.000000          579.221649
+
+The number of nodes is 63
+The empirical entropy is 4.426901 bits per vector
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedbike.raw -o OutputImages/Outputbike45.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           63
+Image to encode:           images/blockedbike.raw
+Encoded file:              OutputImages/Outputbike45.raw
+Number of pixels encoded:  65536
+Average rate:              5.000000
+Empirical entropy:         4.234543
+Average distortion:        1152.219581
+Maximum codeword length:   5
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputbike45.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedboat.raw -o OutputImages/Outputboat45.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           63
+Image to encode:           images/blockedboat.raw
+Encoded file:              OutputImages/Outputboat45.raw
+Number of pixels encoded:  65536
+Average rate:              5.000000
+Empirical entropy:         3.454942
+Average distortion:        240.029884
+Maximum codeword length:   5
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputboat45.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedhat.raw -o OutputImages/Outputhat45.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           63
+Image to encode:           images/blockedhat.raw
+Encoded file:              OutputImages/Outputhat45.raw
+Number of pixels encoded:  65536
+Average rate:              5.000000
+Empirical entropy:         3.514423
+Average distortion:        273.207415
+Maximum codeword length:   5
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputhat45.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedhouse.raw -o OutputImages/Outputhouse45.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           63
+Image to encode:           images/blockedhouse.raw
+Encoded file:              OutputImages/Outputhouse45.raw
+Number of pixels encoded:  65536
+Average rate:              5.000000
+Empirical entropy:         3.962822
+Average distortion:        731.113098
+Maximum codeword length:   5
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputhouse45.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedpeople.raw -o OutputImages/Outputpeople45.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           63
+Image to encode:           images/blockedpeople.raw
+Encoded file:              OutputImages/Outputpeople45.raw
+Number of pixels encoded:  65536
+Average rate:              5.000000
+Empirical entropy:         4.324634
+Average distortion:        345.415482
+Maximum codeword length:   5
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputpeople45.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedplane.raw -o OutputImages/Outputplane45.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           63
+Image to encode:           images/blockedplane.raw
+Encoded file:              OutputImages/Outputplane45.raw
+Number of pixels encoded:  65536
+Average rate:              5.000000
+Empirical entropy:         3.470343
+Average distortion:        600.706964
+Maximum codeword length:   5
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputplane45.raw.stat
+
+46
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvq -t TrainingSet/TrainingImage.raw -c codebook.dat -s statistics -d 4 -r 6  -B
+
+OPTIONS   DESCRIPTIONS                         SETTINGS
+-t        blocked training sequence            TrainingSet/TrainingImage.raw
+-c        codebook                             codebook.dat
+-s        codebook statistics                  statistics
+-d        vector dimension                     4
+-r        stopping rate (bits per vector)      6
+-m        multiplicative offset                0.01
+-h        convergence threshold                0
+-B        produce a balanced tree
+          number of training vectors           49152
+
+           RATE          DISTORTION
+       0.000000        14176.705998
+       1.000000         5502.187911
+       1.713867         3201.910605
+       2.000000         1768.150578
+       2.267232         1484.808079
+       2.713867         1174.728853
+       2.878825         1077.807737
+       3.000000          973.368566
+       3.114237          915.112670
+       3.267232          872.870385
+       3.486613          826.179869
+       3.713867          783.282906
+       3.812663          769.145685
+       3.878825          750.955869
+       3.926717          739.013159
+       4.000000          727.579032
+       4.033915          722.834206
+       4.114237          714.471240
+       4.185730          705.379674
+       4.267232          691.253227
+       4.365682          675.819259
+       4.486613          657.016551
+       4.605855          644.322548
+       4.713867          635.332444
+       4.766337          622.625726
+       4.812663          610.539449
+       4.854492          600.681506
+       4.878825          586.970561
+       4.899984          584.303857
+       4.926717          582.144835
+       4.960409          580.394889
+       5.000000          579.221649
+       5.020467          578.750576
+       5.033915          577.238679
+       5.067769          575.221902
+       5.114237          571.443092
+       5.168152          565.585834
+       5.185730          562.138846
+       5.205282          556.378307
+       5.267232          546.568593
+       5.278544          540.853981
+       5.365682          527.232171
+       5.371684          521.278527
+       5.486613          514.719263
+       5.600891          509.064503
+       5.605855          503.682610
+       5.672404          489.127815
+       5.713867          478.011858
+       5.762756          475.747405
+       5.766337          470.041173
+       5.768778          466.530736
+       5.812663          457.532241
+       5.851196          455.576730
+       5.854492          449.707263
+       5.857178          444.182166
+       5.878825          441.140900
+       5.889425          439.227449
+       5.899984          435.363066
+       5.912760          433.233433
+       5.926717          430.664155
+       5.941895          428.993830
+       5.960409          428.724459
+       5.982564          428.452486
+       6.000000          428.181420
+
+The number of nodes is 127
+The empirical entropy is 5.147189 bits per vector
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedbike.raw -o OutputImages/Outputbike46.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           127
+Image to encode:           images/blockedbike.raw
+Encoded file:              OutputImages/Outputbike46.raw
+Number of pixels encoded:  65536
+Average rate:              6.000000
+Empirical entropy:         5.063217
+Average distortion:        862.853301
+Maximum codeword length:   6
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputbike46.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedboat.raw -o OutputImages/Outputboat46.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           127
+Image to encode:           images/blockedboat.raw
+Encoded file:              OutputImages/Outputboat46.raw
+Number of pixels encoded:  65536
+Average rate:              6.000000
+Empirical entropy:         4.019673
+Average distortion:        170.806049
+Maximum codeword length:   6
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputboat46.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedhat.raw -o OutputImages/Outputhat46.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           127
+Image to encode:           images/blockedhat.raw
+Encoded file:              OutputImages/Outputhat46.raw
+Number of pixels encoded:  65536
+Average rate:              6.000000
+Empirical entropy:         4.034704
+Average distortion:        221.230634
+Maximum codeword length:   6
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputhat46.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedhouse.raw -o OutputImages/Outputhouse46.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           127
+Image to encode:           images/blockedhouse.raw
+Encoded file:              OutputImages/Outputhouse46.raw
+Number of pixels encoded:  65536
+Average rate:              6.000000
+Empirical entropy:         4.573288
+Average distortion:        585.232941
+Maximum codeword length:   6
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputhouse46.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedpeople.raw -o OutputImages/Outputpeople46.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           127
+Image to encode:           images/blockedpeople.raw
+Encoded file:              OutputImages/Outputpeople46.raw
+Number of pixels encoded:  65536
+Average rate:              6.000000
+Empirical entropy:         4.976900
+Average distortion:        250.884910
+Maximum codeword length:   6
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputpeople46.raw.stat
+
+luchengyu@Z690M:~/EE669/HW3/EE669_Fall_2022_HW3_Materials/Problem2/VQcode/tsvq$ ./tsvqe -c codebook.dat -i images/blockedplane.raw -o OutputImages/Outputplane46.raw -R -D
+
+Codebook file:             codebook.dat
+Vector dimension:          4
+Number of Nodes:           127
+Image to encode:           images/blockedplane.raw
+Encoded file:              OutputImages/Outputplane46.raw
+Number of pixels encoded:  65536
+Average rate:              6.000000
+Empirical entropy:         3.992446
+Average distortion:        422.098498
+Maximum codeword length:   6
+Rate file:                 rate.dat
+Statistics file:           OutputImages/Outputplane46.raw.stat
