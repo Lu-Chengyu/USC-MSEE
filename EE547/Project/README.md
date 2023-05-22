@@ -1,4 +1,4 @@
-# EE547_final_project Meet Game
+# EE547 Meet Game
 This repo is EE547 final project. It provide platform to show and search 14000 games from [RAWG](https://rawg.io/) database, which has limited request time.
 
 [GitHub Repo](https://github.com/CaoyiXue/EE547_final_project.git)
