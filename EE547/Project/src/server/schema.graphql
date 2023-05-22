@@ -1,0 +1,164 @@
+type Query {
+  search(
+    searchString: String
+    genreId: String
+    parentPlatformId: String
+    offset: Int = 0
+    limit: Int = 12
+    order: String
+  ): [Game!]
+    @cypher(
+      statement: """
+      CALL apoc.do.when(
+        $searchString IS NULL,
+        'MATCH (node:Game) RETURN node',
+        'CALL db.index.fulltext.queryNodes(index, searchString) YIELD node WITH node RETURN node',
+        {searchString: $searchString, index: 'gameNameIndex'}
+      ) YIELD value
+      WITH DISTINCT value.node AS node
+      CALL apoc.do.when(
+        $genreId IS NULL,
+        'RETURN node',
+        'MATCH (node)-[:HAS_GENRE]->(:Genre {id: genreId}) RETURN node',
+        {genreId: $genreId, node: node}
+      ) YIELD value
+      WITH DISTINCT value.node AS node
+      CALL apoc.do.when(
+        $parentPlatformId IS NULL,
+        'RETURN node',
+        'MATCH (:ParentPlatform {id: parentPlatformId})<-[:IN_CATEGORY]-(:Platform)-[:CAN_PLAY]->(node) RETURN node',
+        {parentPlatformId: $parentPlatformId, node: node}
+      ) YIELD value
+      WITH DISTINCT value.node AS node
+      CALL apoc.do.when(
+        $order IS NULL,
+        'RETURN node',
+        'RETURN node ORDER BY node[order] DESC',
+        {order: $order, node: node}
+      ) YIELD value
+      WITH value.node AS node
+      RETURN node
+      SKIP $offset LIMIT $limit
+      """
+    )
+}
+
+interface ClickProperties @relationshipProperties {
+  value: BigInt!
+}
+
+interface LikeProperties @relationshipProperties {
+  value: BigInt!
+}
+
+type User {
+  name: String
+  email: String!
+  passward: String!
+  click: [Game!]!
+    @relationship(type: "CLICK", direction: OUT, properties: "ClickProperties")
+  like: [Game!]!
+    @relationship(type: "LIKE", direction: OUT, properties: "LikeProperties")
+  want_play: [Game!]! @relationship(type: "WANT_PLAY", direction: OUT)
+  recommend(gameId: String!, first: Int = 6): [User]
+    @cypher(
+      statement: """
+      MATCH (this)-[:WANT_PLAY]->(g:Game {id: $gameID})<-[:WANT_PLAY]-(others:User)
+
+      OPTIONAL MATCH (u)-[r1s:LIKE|CLICK]->(gs:Game)<-[r2s:LIKE|CLICK]-(others)
+      WITH r1s, r2s, (r1s.value+r2s.value)*100 AS scores1, others
+      UNWIND others as other
+      WITH other AS others, sum(scores1) AS scores1
+
+      OPTIONAL MATCH (u)-[rel21s:LIKE|CLICK]->(g1s:Game)-[:DEVELOP|CAN_PLAY|PUBLISH|HAS_GENRE|HAS_TAG]-(overlaps)-[:DEVELOP|CAN_PLAY|PUBLISH|HAS_GENRE|HAS_TAG]-(g2s:Game)<-[rel22s:LIKE|CLICK]-(others)
+      WITH rel21s, rel22s, count(overlaps)*(rel21s.value+rel22s.value) AS scores2, others, scores1
+      UNWIND others AS other
+      WITH other, sum(scores2) AS scores2, scores1
+      WITH other AS others, scores2+scores1 AS scores
+      RETURN others ORDER BY scores DESC
+      """
+    )
+}
+
+type Game @exclude(operations: [CREATE, UPDATE, DELETE]) {
+  background_image: String
+  description_raw: String!
+  developers: [Developer!]! @relationship(type: "DEVELOP", direction: IN)
+  genres: [Genre!]! @relationship(type: "HAS_GENRE", direction: OUT)
+  tags: [Tag!]! @relationship(type: "HAS_TAG", direction: OUT)
+  id: String!
+  metacritic: Float
+  name: String!
+  platforms: [Platform!]! @relationship(type: "CAN_PLAY", direction: IN)
+  parent_platforms: [ParentPlatform!]!
+    @cypher(
+      statement: """
+      MATCH (this)<-[:CAN_PLAY]-(:Platform)-[:IN_CATEGORY]->(pp:ParentPlatform)
+      RETURN DISTINCT pp
+      """
+    )
+  publishers: [Publisher!]! @relationship(type: "PUBLISH", direction: IN)
+  rating: Float!
+  rating_top: Float!
+  released: Date
+  screen_shots: [String]!
+  slug: String!
+  similar(first: Int = 6): [Game]
+    @cypher(
+      statement: """
+      MATCH (this)-[:DEVELOP|:CAN_PLAY|:PUBLISH|:HAS_GENRE|:HAS_TAG]-(overlap)-[:DEVELOP|:CAN_PLAY|:PUBLISH|:HAS_GENRE|:HAS_TAG]-(res:Game)
+      WITH res, COUNT(*) AS score
+      RETURN res ORDER BY score DESC LIMIT $first
+      """
+    )
+  users_click: [User!]!
+    @relationship(type: "CLICK", direction: IN, properties: "ClickProperties")
+  users_like: [User!]!
+    @relationship(type: "LIKE", direction: IN, properties: "LikeProperties")
+  users_want_play: [User!]! @relationship(type: "WANT_PLAY", direction: IN)
+}
+
+type Developer @exclude(operations: [CREATE, UPDATE, DELETE]) {
+  games: [Game!]! @relationship(type: "DEVELOP", direction: OUT)
+  id: String!
+  name: String!
+  slug: String!
+}
+
+type Genre @exclude(operations: [CREATE, UPDATE, DELETE]) {
+  games: [Game!]! @relationship(type: "HAS_GENRE", direction: IN)
+  id: String!
+  image_background: String!
+  name: String!
+  slug: String!
+}
+
+type ParentPlatform @exclude(operations: [CREATE, UPDATE, DELETE]) {
+  id: String!
+  name: String!
+  platforms: [Platform!]! @relationship(type: "IN_CATEGORY", direction: IN)
+  slug: String!
+}
+
+type Platform @exclude(operations: [CREATE, UPDATE, DELETE]) {
+  games: [Game!]! @relationship(type: "CAN_PLAY", direction: OUT)
+  id: String!
+  parent_platforms: [ParentPlatform!]!
+    @relationship(type: "IN_CATEGORY", direction: OUT)
+  name: String!
+  slug: String!
+}
+
+type Publisher @exclude(operations: [CREATE, UPDATE, DELETE]) {
+  id: String!
+  name: String!
+  games: [Game!]! @relationship(type: "PUBLISH", direction: OUT)
+  slug: String!
+}
+
+type Tag @exclude(operations: [CREATE, UPDATE, DELETE]) {
+  games: [Game!]! @relationship(type: "HAS_TAG", direction: IN)
+  id: String!
+  name: String!
+  slug: String!
+}
