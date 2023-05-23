@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML 5</title>
+  </head>
+  <body>
+
+    <h1>Players</h1>
+
+    <!-- <form action="/customers/delete/all" method="post">  
+      <input type="submit" value="delete"></input>
+    </form>
+    
+    <form action="/customers" method="post">
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="submit" value="Submit" />
+    </form> -->
+   
+    <table>
+      <tbody>
+        <tr>
+          <th scope="col">Rows</th>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Handed</th>
+          <th scope="col">Current Balance</th>
+          <th scope="col">Active State</th>
+          <th scope="col">Link</th>
+        </tr>
+      </tbody>
+      <% rows = 0, data.forEach((d)=>{ %>
+      <tr>
+        <td><%= ++rows %></td>
+        <td><%= d.pid %></td>
+        <td><%= d.name %></td>
+        <td><%= d.handed %></td>
+        <td><%= d.balance_usd_cents %></td>
+        <td><%= d.is_active %></td>
+        <td><a href="http://127.0.0.1:3000/player/<%= d.pid %>/edit.html">Edit Player</a></td>
+      </tr>
+      <% }) %>
+    </table>
+    <ul>
+      <% if(rows!=0){ %>
+        <p>Number of Players: <%= rows %></p>
+        <% }
+        else{%>
+          <li>Zero Players, Please Add One!</li>
+        <%} %>
+    </ul>
+    <a href="http://127.0.0.1:3000/player/create.html">ADD Players</a>  
+  </body>
+</html>

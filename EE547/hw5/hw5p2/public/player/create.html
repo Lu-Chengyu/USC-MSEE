@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Create Player</title>
+  </head>
+  <body>
+    <h1>Create Player</h1>
+    <form action="/api/player" method="post">
+      <div>
+        <label>First Name: <input type="text" name="fname"></label>
+      </div>
+      <div>
+        <label>Last Name: <input type="text" name="lname"></label>
+      </div>
+      <div>
+        <label>Handed: <select name="handed">
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+          <option value="ambi">Ambi</option>
+        </select></label>
+      </div>
+      <div>
+        <label>Initial Balance USD Cents: <input type="text" name="initial_balance_usd_cents"></label>
+      </div>
+      <input type="hidden" name="redirect" value="/players.html">
+      <div>
+        <button type="submit" value="Submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

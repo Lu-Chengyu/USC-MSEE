@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HTML 5</title>
+    </head>
+    <body>
+        <h1> Edit Player </h1>
+        <form id="url" method="post">
+            <div>
+                <label>Last Name: <input id="last_name" type="text" name="lname"></label>
+            </div>
+            <div>
+                <label>True:<input id="true" type="radio" name="active" value="true"></label>
+                <label>False:<input id="false" type="radio" name="active" value="false"></label>
+            </div>
+            <input type="hidden" name="redirect" value="/players.html">
+            <div>
+                <button type="submit" value="Submit">Submit</button>
+            </div>
+        </form>
+        <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const url = new URL(window.location.href);
+                    const playerId = url.pathname.split('/')[2];
+                    return fetch(`/api/player/${playerId}`)
+                    .then(r => r.json())
+                    .then(data => {
+                        // example, set value for text field
+                        // note: just raw data, no "cleanup" for user
+                        // document.getElementById('balance_usd').value = data.balance_usd_cents;
+                        document.getElementById('url').action = `/api/player/${playerId}`;
+                        const lastName = data.name.split(' ')[1];
+                        document.getElementById('last_name').value = lastName;
+                        if(data.is_active){
+                            document.getElementById('true').checked = true;
+                        }
+                        else{
+                            document.getElementById('false').checked = true;
+                        }
+                        // [...] add more
+                        // "id=" attributes uniquely identify elements
+                    })
+                    .catch(error => {
+                        document.getElementById('flash-message').innerHTML = error;
+                    });
+                });
+        </script>
+
+    </body>
+
+</html>
