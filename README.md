@@ -3,7 +3,7 @@ University of Southern California Master of Science in Electrical Engineering
 
 <ul>
   <li>CSCI455x: Introduction to Programming System Design - 2023Spring - A</li>
-  <li>CSCI526: Advanced Mobile Devices and Games - 2024Spring - </li>
+  <li>CSCI526: Advanced Mobile Devices and Games - 2024Spring - A</li>
   <li>CSCI585: Database Systems - 2023Fall - A-</li>
   <li>EE450: Introduction to Computer Networks - 2023Fall - A</li>
   <li>EE538: Computing Principles for Electrical Engineers - 2022Fall - A</li>
